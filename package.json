@@ -43,6 +43,6 @@
     "express": "^4.13.4"
   },
   "scripts": {
-   "test": "./test/karma start"
+   "test": "./node_modules/.bin/karma start ./test/karma.conf.js"
 }
 }
