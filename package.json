@@ -43,6 +43,7 @@
     "express": "^4.13.4"
   },
   "scripts": {
-   "test": "./node_modules/.bin/karma start ./test/karma.conf.js"
+  "test": "./node_modules/.bin/karma start --single-run --browsers PhantomJS"
+//    "test": "./node_modules/.bin/karma start ./test/karma.conf.js"
 }
 }
