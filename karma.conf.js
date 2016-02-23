@@ -2,6 +2,11 @@
 
   module.exports = function(config) {
     config.set({
+            // testing framework to use (jasmine/mocha/qunit/...)
+    // as well as any additional frameworks (requirejs/chai/sinon/...)
+    frameworks: [
+      "jasmine"
+    ],
 files: [
     // bower:js
     'bower_components/jquery/dist/jquery.js',
