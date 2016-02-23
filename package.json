@@ -41,5 +41,8 @@
   },
   "dependencies": {
     "express": "^4.13.4"
-  }
+  },
+  "scripts": {
+   "test": "./node_modules/.bin/karma start --single-run --browsers PhantomJS"
+}
 }
