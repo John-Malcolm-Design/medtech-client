@@ -1,3 +1,7 @@
+
+
+  module.exports = function(config) {
+    config.set({
 files: [
     // bower:js
     'bower_components/jquery/dist/jquery.js',
@@ -14,16 +18,18 @@ files: [
     "app/scripts/**/*.js",
     "test/mock/**/*.js",
     "test/spec/**/*.js"
-];
+],
 
-singleRun = false;
+singleRun: false,
 
 browsers: [
     "PhantomJS"
-];
+],
 
 // Which plugins to enable
 plugins: [
     "karma-phantomjs-launcher",
     "karma-jasmine"
-];
+]
+    });
+  };
