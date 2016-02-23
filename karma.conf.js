@@ -25,7 +25,7 @@ files: [
     "test/spec/**/*.js"
 ],
 
-singleRun: false,
+singleRun: true,
 
 browsers: [
     "PhantomJS"
