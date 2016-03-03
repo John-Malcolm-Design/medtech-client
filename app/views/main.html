@@ -17,6 +17,11 @@
             <div class="col-md-4">
                 <div class="content-card">
                     <h1><span class="glyphicon glyphicon glyphicon-th-list" aria-hidden="true"></span> REFINE BY</h1>
+                    <p>{{name}} {{ lowerCaseHandle() }}</p>
+                    <p><input type="text" ng-model="handle"></p>
+                    <div class="alert" ng-class="{ 'alert-warning': handle.length !== characters, 'alert-danger': handle.length > 5 }" ng-show="handle.length !== characters">
+                        Must be at least 5 characters.
+                    </div>
                 </div>
             </div>
             
