@@ -13,6 +13,7 @@ describe('Controller: BenchmarkCtrl', function () {
     scope = $rootScope.$new();
     BenchmarkCtrl = $controller('BenchmarkCtrl', {
       $scope: scope
+      
       // place here mocked dependencies
     });
   }));

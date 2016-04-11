@@ -1,14 +1,21 @@
 <div class="row">
     <div class="col-lg-8 content-card">
         <h1><span class="glyphicon glyphicon glyphicon-stats" aria-hidden="true"></span> Benchmark</h1>
-        <article class="homepage-article">
-            <h2>Strategic Focus</h2>
-            <div class="col-lg-10">
-                <p>The Company’s areas of Strategic Focus for Product Development (PD) are stagnant and follow traditional lines based on its history and/ or the personal opinion of the key principals.</p>
+        <article class="homepage-article" dir-paginate="item in benchmark.identify | itemsPerPage: 1">
+            <h2>{{item.heading}}</h2>
+            <h3>Entry</h3>
+            <div ng-repeat="column in item.columns[0]">
+                <p class="benchmark-line-item" ng-class="column.warn == true ? 'bg-danger' : 'bg-success'">{{column.text}}</p>
             </div>
-            <div class="col-lg-2">
-                <button class="areas-btn">AREAS</button>
+            <h3>Learning</h3>
+            <div ng-repeat="column in item.columns[1]">
+                <p class="benchmark-line-item" ng-class="column.warn == true ? 'bg-danger' : 'bg-success'">{{column.text}}</p>
             </div>
+            <h3>Performing</h3>
+            <div ng-repeat="column in item.columns[2]">
+                <p class="benchmark-line-item" ng-class="column.warn == true ? 'bg-danger' : 'bg-success'">{{column.text}}</p>
+            </div>
+            <dir-pagination-controls></dir-pagination-controls>
         </article>
     </div>
 

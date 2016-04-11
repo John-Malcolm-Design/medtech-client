@@ -15,7 +15,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'angularUtils.directives.dirPagination'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -38,6 +39,11 @@ angular
         templateUrl: 'views/benchmark.html',
         controller: 'BenchmarkCtrl',
         controllerAs: 'benchmark'
+      })
+      .when('/benchmark-dashboard', {
+        templateUrl: 'views/benchmark-dashboard.html',
+        controller: 'BenchmarkDashboardCtrl',
+        controllerAs: 'benchmarkDashboard'
       })
       .otherwise({
         redirectTo: '/'
