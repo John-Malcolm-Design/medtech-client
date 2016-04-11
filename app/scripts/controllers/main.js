@@ -17,7 +17,7 @@ angular.module('medtechClientApp')
     
     $scope.name = 'John Malcolm';
     
-    $scope.handle='';
+    // $scope.handle='';
     
     $scope.characters = 5;
     
@@ -31,10 +31,10 @@ angular.module('medtechClientApp')
     // ^ Tells Angular to run the Digest Loop
     // AngularJS auto wraps everything in scope.apply if it
     // is contained within the AngularJS architecture
-    $scope.$watch('handle', function(newValue, oldValue){
-        console.info('Changed');
-        console.log('Old: ' + oldValue);
-        console.log('New: ' + newValue);
-    });
+    // $scope.$watch('handle', function(newValue, oldValue){
+    //     console.info('Changed');
+    //     console.log('Old: ' + oldValue);
+    //     console.log('New: ' + newValue);
+    // });
     
   }]);
