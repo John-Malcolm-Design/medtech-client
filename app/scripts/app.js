@@ -34,6 +34,11 @@ angular
         controller: 'FaqCtrl',
         controllerAs: 'faq'
       })
+      .when('/benchmark', {
+        templateUrl: 'views/benchmark.html',
+        controller: 'BenchmarkCtrl',
+        controllerAs: 'benchmark'
+      })
       .otherwise({
         redirectTo: '/'
       });
