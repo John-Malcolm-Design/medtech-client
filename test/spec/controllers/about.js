@@ -13,7 +13,7 @@ describe('Controller: AboutCtrl', function () {
     scope = $rootScope.$new();
     AboutCtrl = $controller('AboutCtrl', {
       $scope: scope
-      // place here mocked dependencies
+      // pl ace here mocked dependencies
     });
   }));
 

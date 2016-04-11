@@ -8,14 +8,14 @@
  * Controller of the medtechClientApp
  */
 angular.module('medtechClientApp')
-  .controller('MainCtrl', ['$scope', function ($scope) {
-    $scope.awesomeThings = [
+  .controller('MainCtrl', ['$scope', function () {
+    this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
     
-    $scope.name = 'John Malcolm';
+    this.name = 'John Malcolm';
     
     // // $scope.handle='';
     

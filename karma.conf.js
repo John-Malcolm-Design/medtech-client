@@ -19,8 +19,10 @@ files: [
     'bower_components/angular-sanitize/angular-sanitize.js',
     'bower_components/angular-touch/angular-touch.js',
     'bower_components/angular-mocks/angular-mocks.js',
+    'bower_components/angularUtils-pagination/dirPagination.js',
     // endbower
     "app/scripts/**/*.js",
+    "test/spec/controllers/*.js",
     "test/mock/**/*.js",
     "test/spec/**/*.js"
 ],
