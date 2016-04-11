@@ -8,7 +8,7 @@
  * Controller of the medtechClientApp
  */
 angular.module('medtechClientApp')
-  .controller('MainCtrl', ['$scope', '$filter', function ($scope, $filter) {
+  .controller('MainCtrl', ['$scope', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -17,15 +17,15 @@ angular.module('medtechClientApp')
     
     $scope.name = 'John Malcolm';
     
-    // $scope.handle='';
+    // // $scope.handle='';
     
-    $scope.characters = 5;
+    // $scope.characters = 5;
     
-    // Two way data binding with directives example
-    // n.b - Digest Loop and Watch list
-    $scope.lowerCaseHandle = function(){
-        return $filter('lowercase')($scope.handle);
-    };
+    // // Two way data binding with directives example
+    // // n.b - Digest Loop and Watch list
+    // $scope.lowerCaseHandle = function(){
+    //     return $filter('lowercase')($scope.handle);
+    // };
     
     // $scope.apply(function(){}) 
     // ^ Tells Angular to run the Digest Loop
