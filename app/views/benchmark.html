@@ -1,6 +1,20 @@
 <div class="row">
     <div class="col-lg-8 content-card">
-        <h1><span class="glyphicon glyphicon glyphicon-stats" aria-hidden="true"></span> Benchmark</h1>
+        <div class="row">
+            <div class="col-sm-9">
+                <h1><span class="glyphicon glyphicon glyphicon-stats" aria-hidden="true"></span> Benchmark</h1>
+
+            </div>
+            <div class="col-sm-3">
+                <h3>Progress</h3>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                        <span class="sr-only">70% Complete</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <article class="homepage-article" dir-paginate="item in benchmark.identify | itemsPerPage: 1">
             <h2>{{item.heading}}</h2>
             <h3>Entry</h3>
@@ -15,8 +29,16 @@
             <div ng-repeat="column in item.columns[2]">
                 <p class="benchmark-line-item" ng-class="column.warn == true ? 'bg-danger' : 'bg-success'">{{column.text}}</p>
             </div>
-            <dir-pagination-controls></dir-pagination-controls>
+            <div class="rate-section">
+                <h3>Rate Section</h3>
+                <button type="button" class="btn btn-primary">Commencing</button>
+                <button type="button" class="btn btn-primary">Partially Achieving</button>
+                <button type="button" class="btn btn-primary">Achieving</button>
+                <button type="button" class="btn btn-primary">Too early to rate</button>
+            </div>
         </article>
+        <dir-pagination-controls></dir-pagination-controls>
+
     </div>
 
     <div class="col-md-4">

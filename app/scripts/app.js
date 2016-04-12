@@ -45,6 +45,11 @@ angular
         controller: 'BenchmarkDashboardCtrl',
         controllerAs: 'benchmarkDashboard'
       })
+      .when('/admin-dashboard', {
+        templateUrl: 'views/admin-dashboard.html',
+        controller: 'AdminDashboardCtrl',
+        controllerAs: 'adminDashboard'
+      })
       .otherwise({
         redirectTo: '/'
       });
