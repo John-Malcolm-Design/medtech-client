@@ -1,36 +1,26 @@
-<div class="row">
-    <div class="col-lg-8 content-card">
-        <div class="row">
-            <div class="col-sm-9">
-                <h1><span class="glyphicon glyphicon glyphicon-stats" aria-hidden="true"></span> Benchmark</h1>
-
-            </div>
-            <div class="col-sm-3">
-                <h3>Progress</h3>
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                        <span class="sr-only">70% Complete</span>
-                    </div>
-                </div>
-            </div>
+<div class="row page-title">
+    <div class="col-sm-3">
+        <h1>Benchmark</h1>
+        <div class="label-bg">IDENTIFY</div>
+    </div>
+    <div class="col-sm-5 lvls">
+        <div class="pull-right">
+            <div class="btn btn-lvl lvl-active">ENTRY</div>
+            <div class="btn btn-lvl">LEARNING</div>
+            <div class="btn btn-lvl">PERFORMING</div>
         </div>
-
-        <article class="homepage-article" dir-paginate="item in benchmark.identify | itemsPerPage: 1">
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-8">
+        <article class="homepage-article content-card" dir-paginate="item in benchmark.identify | itemsPerPage: 1">
             <h2>{{item.heading}}</h2>
             <h3>Entry</h3>
             <div ng-repeat="column in item.columns[0]">
                 <p class="benchmark-line-item" ng-class="column.warn == true ? 'bg-danger' : 'bg-success'">{{column.text}}</p>
             </div>
-            <h3>Learning</h3>
-            <div ng-repeat="column in item.columns[1]">
-                <p class="benchmark-line-item" ng-class="column.warn == true ? 'bg-danger' : 'bg-success'">{{column.text}}</p>
-            </div>
-            <h3>Performing</h3>
-            <div ng-repeat="column in item.columns[2]">
-                <p class="benchmark-line-item" ng-class="column.warn == true ? 'bg-danger' : 'bg-success'">{{column.text}}</p>
-            </div>
             <div class="rate-section">
-                <h3>Rate Section</h3>
+                <h3>Rate your performance</h3>
                 <button type="button" class="btn btn-primary">Commencing</button>
                 <button type="button" class="btn btn-primary">Partially Achieving</button>
                 <button type="button" class="btn btn-primary">Achieving</button>
@@ -38,19 +28,5 @@
             </div>
         </article>
         <dir-pagination-controls></dir-pagination-controls>
-
     </div>
-
-    <div class="col-md-4">
-        <div class="content-card">
-            <h1><span class="glyphicon glyphicon glyphicon-th-list" aria-hidden="true"></span> REFINE BY</h1>
-            <p>{{name}}</p>
-            <p>
-                <input type="text" ng-model="handle">
-            </p>
-
-        </div>
-    </div>
-
 </div>
-<!-- /.row -->
