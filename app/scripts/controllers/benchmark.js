@@ -8,22 +8,43 @@
  * Controller of the medtechClientApp
  */
 angular.module('medtechClientApp')
-    .controller('BenchmarkCtrl', function() {
+    .controller('BenchmarkCtrl', function ($http) {
         this.awesomeThings = [
             'HTML5 Boilerplate',
             'AngularJS',
             'Karma'
         ];
-        
+
         this.levelIndex = 0;
         this.levels = ['Entry', 'Learning', 'Performing'];
-        this.level= this.levels[0];
-        
-        this.changeLevel = function(level){
-            this.levelIndex = level;
-            this.level= this.levels[level];
-        };
+        this.level = this.levels[0];
 
+        this.changeLevel = function (level) {
+            this.levelIndex = level;
+            this.level = this.levels[level];
+        };
+        
+        
+        var recommendations = [
+        ];             
+        this.recommendations = recommendations;
+
+        this.getRecommendations = function () {
+            var labels = {
+                'heading': angular.element('#currentHeading').text(),
+                'subHeading': this.level
+            };
+
+            $http({
+                method: 'POST',
+                url: 'http://medtech-api.herokuapp.com/articles/recommend',
+                data: labels
+            }).then(function successCallback(response) {
+                recommendations.push(response);
+
+            });
+
+        };
         this.identify = [{ //Row  
             'heading': 'Strategic Focus',
             'columns': [
