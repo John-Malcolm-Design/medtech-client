@@ -14,6 +14,15 @@ angular.module('medtechClientApp')
             'AngularJS',
             'Karma'
         ];
+        
+        this.levelIndex = 0;
+        this.levels = ['Entry', 'Learning', 'Performing'];
+        this.level= this.levels[0];
+        
+        this.changeLevel = function(level){
+            this.levelIndex = level;
+            this.level= this.levels[level];
+        };
 
         this.identify = [{ //Row  
             'heading': 'Strategic Focus',

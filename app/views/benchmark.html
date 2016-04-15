@@ -5,9 +5,9 @@
     </div>
     <div class="col-sm-5 lvls">
         <div class="pull-right">
-            <div class="btn btn-lvl lvl-active">ENTRY</div>
-            <div class="btn btn-lvl">LEARNING</div>
-            <div class="btn btn-lvl">PERFORMING</div>
+            <div class="btn btn-lvl lvl-active" ng-click="benchmark.changeLevel('0')">ENTRY</div>
+            <div class="btn btn-lvl" ng-click="benchmark.changeLevel('1')">LEARNING</div>
+            <div class="btn btn-lvl" ng-click="benchmark.changeLevel('2')">PERFORMING</div>
         </div>
     </div>
 </div>
@@ -15,8 +15,8 @@
     <div class="col-sm-8">
         <article class="homepage-article content-card" dir-paginate="item in benchmark.identify | itemsPerPage: 1">
             <h2>{{item.heading}}</h2>
-            <h3>Entry</h3>
-            <div ng-repeat="column in item.columns[0]">
+            <h3>{{benchmark.level}}</h3>
+            <div ng-repeat="column in item.columns[benchmark.levelIndex]">
                 <p class="benchmark-line-item" ng-class="column.warn == true ? 'bg-danger' : 'bg-success'">{{column.text}}</p>
             </div>
             <div class="rate-section">
