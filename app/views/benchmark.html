@@ -18,6 +18,9 @@
 </div>
 <div class="row">
     <div class="col-sm-8">
+        <div ng-repeat="doc in benchmark.recommendations">
+                name: {{doc.fileName}}
+            </div>
         <article class="homepage-article content-card" dir-paginate="item in benchmark.identify | itemsPerPage: 1">
             <h2 id="currentHeading">{{item.heading}}</h2>
             <h3>{{benchmark.level}}</h3>
@@ -33,14 +36,5 @@
             </div>
         </article>
         <dir-pagination-controls></dir-pagination-controls>
-    </div>
-    <div class="col-sm-4">
-            
-        <div class="homepage-article content-card">
-            
-            <div ng-repeat="doc in benchmark.recommendations">
-                name: {{doc.fileName}}
-            </div>
-        </div>
     </div>
 </div>
