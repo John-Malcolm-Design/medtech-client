@@ -35,7 +35,7 @@ angular.module('medtechClientApp')
             };
             $http({
                 method: 'POST',
-                url: 'http://medtech-api.herokuapp.com/articles/recommend',
+                url: 'https://medtech-api.herokuapp.com/articles/recommend',
                 data: labels
             }).then(function successCallback(response) {
                 
