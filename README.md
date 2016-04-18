@@ -60,7 +60,7 @@ This diagram gives a high level overview of both medtech client and medtech api.
 | travis.yml | Travis Continuous integration config file |  
 | Procfile | Heroku config file |  
 
-## Issues & Future Development
+## Issues
 So far working on this project we have designed a style guide, scaffolded out the system and set it up so it can now communicate with the Java backend. We spent a good bit of time leveraging lots of different technologies to scaffold out a robust and scalable client side architecture. Unit testing and continuous integration are built in from the start to facilitate an agile workflow that is robust. 
 
 The only downside to a system designed with so many disperate packages and frameworks is troubleshooting and debugging can be a lot more complex. We have realised that logging and properly understanding the various configuration files is key. 
