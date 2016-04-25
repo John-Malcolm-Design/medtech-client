@@ -60,6 +60,29 @@ This diagram gives a high level overview of both medtech client and medtech api.
 | travis.yml | Travis Continuous integration config file |  
 | Procfile | Heroku config file |  
 
+## Running the application
+You will need Node.JS, NPM, Bower, Grunt, Ruby & Ruby Sass-Compass to run and build the application.
+
+Clone the repo and move into directory.
+```bash
+git clone https://github.com/johnmalcolm/medtech-client && cd medtech-client
+```
+
+Install all project dependencies.
+```bash
+npm install && bower install
+```
+
+Run on localhost
+```bash
+grunt serve
+```
+
+Build dist folder
+```bash
+grunt build
+```
+
 ## Issues
 So far working on this project we have designed a style guide, scaffolded out the system and set it up so it can now communicate with the Java backend. We spent a good bit of time leveraging lots of different technologies to scaffold out a robust and scalable client side architecture. Unit testing and continuous integration are built in from the start to facilitate an agile workflow that is robust. 
 
